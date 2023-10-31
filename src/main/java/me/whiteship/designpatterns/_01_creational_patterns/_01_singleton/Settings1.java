@@ -7,8 +7,11 @@ public class Settings1 {
 
     private static Settings1 instance;
 
-    private Settings1() { }
+    // private constructor
+    private Settings1() {
+    }
 
+    // Global Access
     public static Settings1 getInstance() {
         if (instance == null) {
             instance = new Settings1();
@@ -16,5 +19,4 @@ public class Settings1 {
 
         return instance;
     }
-
 }
