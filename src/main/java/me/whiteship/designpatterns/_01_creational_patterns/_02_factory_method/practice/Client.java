@@ -3,11 +3,13 @@ package me.whiteship.designpatterns._01_creational_patterns._02_factory_method.p
 public class Client {
 
     public static void main(String[] args) {
-        Ship whiteship = ShipFactory.orderShip("Whiteship", "keesun@mail.com");
-        System.out.println(whiteship);
+        Client client = new Client();
+        client.print(new WhiteshipFactory(), "whiteship", "keesun@mail.com");
+        client.print(new BlackshipFactory(), "blackship", "keesun@mail.com");
+    }
 
-        Ship blackship = ShipFactory.orderShip("Blackship", "keesun@mail.com");
-        System.out.println(blackship);
+    private void print(ShipFactory shipFactory, String name, String email) {
+        System.out.println(shipFactory.orderShip(name, email));
     }
 
 }
