@@ -1,7 +1,7 @@
 package me.whiteship.designpatterns._01_creational_patterns._02_factory_method.practice;
 
-import me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory._02_after.Anchor;
-import me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory._02_after.Wheel;
+import me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory.practice.Anchor;
+import me.whiteship.designpatterns._01_creational_patterns._03_abstract_factory.practice.Wheel;
 
 public class Ship {
 
