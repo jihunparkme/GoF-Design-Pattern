@@ -1,4 +1,4 @@
-package com.pattern.design.factoryMethod;
+package com.pattern.design.creationalDesignPatterns.factoryMethod;
 
 /**
  * Product
