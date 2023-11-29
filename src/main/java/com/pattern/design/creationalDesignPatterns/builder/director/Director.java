@@ -7,6 +7,10 @@ import com.pattern.design.creationalDesignPatterns.builder.components.GPSNavigat
 import com.pattern.design.creationalDesignPatterns.builder.components.Transmission;
 import com.pattern.design.creationalDesignPatterns.builder.components.TripComputer;
 
+/**
+ * Director
+ * - 생성 단계들을 호출하는 순서를 정의하므로 제품들의 특정 설정을 만들고 재사용 가능
+ */
 public class Director {
 
     public void constructSportsCar(Builder builder) {

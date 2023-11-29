@@ -7,6 +7,11 @@ import com.pattern.design.creationalDesignPatterns.builder.components.GPSNavigat
 import com.pattern.design.creationalDesignPatterns.builder.components.Transmission;
 import com.pattern.design.creationalDesignPatterns.builder.components.TripComputer;
 
+/**
+ * Concrete Builder
+ * - 구상 빌더들은 생성 단계들의 다양한 구현을 제공
+ * - 또 공통 인터페이스를 따르지 않는 제품들도 생산 가능
+ */
 public class CarManualBuilder implements Builder {
     private CarType type;
     private int seats;

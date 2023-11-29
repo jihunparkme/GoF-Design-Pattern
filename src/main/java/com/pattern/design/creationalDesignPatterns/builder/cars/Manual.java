@@ -5,6 +5,11 @@ import com.pattern.design.creationalDesignPatterns.builder.components.GPSNavigat
 import com.pattern.design.creationalDesignPatterns.builder.components.Transmission;
 import com.pattern.design.creationalDesignPatterns.builder.components.TripComputer;
 
+/**
+ * Product
+ * - 제품들은 빌더 결과로 나온 객체
+ * - 다른 빌더들에 의해 생성된 제품들은 같은 클래스 계층구조 또는 인터페이스에 속할 필요가 없음
+ */
 public class Manual {
     private final CarType carType;
     private final int seats;
