@@ -1,4 +1,4 @@
-package com.pattern.design.creationalDesignPatterns.factoryMethod;
+package com.pattern.design.creationalDesignPatterns.factoryMethod.products;
 
 /**
  * ConcreteProduct

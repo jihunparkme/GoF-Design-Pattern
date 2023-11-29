@@ -1,5 +1,9 @@
 package com.pattern.design.creationalDesignPatterns.factoryMethod;
 
+import com.pattern.design.creationalDesignPatterns.factoryMethod.factory.Logistics;
+import com.pattern.design.creationalDesignPatterns.factoryMethod.factory.RoadLogistics;
+import com.pattern.design.creationalDesignPatterns.factoryMethod.factory.SeaLogistics;
+
 public class App {
 
     private static Logistics creator;

@@ -1,4 +1,6 @@
-package com.pattern.design.creationalDesignPatterns.factoryMethod;
+package com.pattern.design.creationalDesignPatterns.factoryMethod.factory;
+
+import com.pattern.design.creationalDesignPatterns.factoryMethod.products.Transport;
 
 /**
  * Creator
