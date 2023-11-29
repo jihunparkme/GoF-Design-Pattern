@@ -1,4 +1,4 @@
-package com.pattern.design.creationalDesignPatterns.abstractFactory;
+package com.pattern.design.creationalDesignPatterns.abstractFactory.chairs;
 
 /**
  * Abstract Product

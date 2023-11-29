@@ -1,5 +1,10 @@
 package com.pattern.design.creationalDesignPatterns.abstractFactory;
 
+import com.pattern.design.creationalDesignPatterns.abstractFactory.app.Application;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.factories.FurnitureFactory;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.factories.ModernFurnitureFactory;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.factories.VictorianFurnitureFactory;
+
 public class Demo {
     private static Application configureApplication(String pattern) {
         Application app;

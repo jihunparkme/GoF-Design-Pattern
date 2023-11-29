@@ -1,4 +1,9 @@
-package com.pattern.design.creationalDesignPatterns.abstractFactory;
+package com.pattern.design.creationalDesignPatterns.abstractFactory.app;
+
+import com.pattern.design.creationalDesignPatterns.abstractFactory.chairs.Chair;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.factories.FurnitureFactory;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.sofas.Sofa;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.tables.Table;
 
 public class Application {
     private Chair chair;

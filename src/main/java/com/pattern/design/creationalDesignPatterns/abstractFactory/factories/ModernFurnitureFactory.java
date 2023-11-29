@@ -1,4 +1,11 @@
-package com.pattern.design.creationalDesignPatterns.abstractFactory;
+package com.pattern.design.creationalDesignPatterns.abstractFactory.factories;
+
+import com.pattern.design.creationalDesignPatterns.abstractFactory.chairs.Chair;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.chairs.ModernChair;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.sofas.ModernSofa;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.sofas.Sofa;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.tables.ModernTable;
+import com.pattern.design.creationalDesignPatterns.abstractFactory.tables.Table;
 
 /**
  * ConcreteFactory
