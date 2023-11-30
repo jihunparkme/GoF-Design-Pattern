@@ -18,25 +18,18 @@ public class Demo {
     public static void main(String[] args) {
         Director director = new Director();
 
-        // Director gets the concrete builder object from the client
-        // (application code). That's because application knows better which
-        // builder to use to get a specific product.
+        // 디렉터는 클라이언트로부터 구체적인 빌더 개체를 가져온 뒤 연결
         CarBuilder builder = new CarBuilder();
         director.constructSportsCar(builder);
 
-        // The final product is often retrieved from a builder object, since
-        // Director is not aware and not dependent on concrete builders and
-        // products.
         Car car = builder.getResult();
-        System.out.println("Car built:\n" + car.getCarType());
-
+        System.out.println("Car built:\n" + car.getCarType()); // SPORTS_CAR
 
         CarManualBuilder manualBuilder = new CarManualBuilder();
-
-        // Director may know several building recipes.
         director.constructSportsCar(manualBuilder);
+
         Manual carManual = manualBuilder.getResult();
-        System.out.println("\nCar manual built:\n" + carManual.print());
+        System.out.println("\nCar manual built:\n" + carManual.print()); // Type of car: SPORTS_CAR
     }
 
 }
