@@ -4,8 +4,6 @@ import com.pattern.design.behavioralDesignPatterns.command.commands.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * 수신자 클래스
@@ -33,30 +31,11 @@ public class Editor {
         JButton ctrlV = new JButton("Ctrl+V");
         JButton ctrlZ = new JButton("Ctrl+Z");
         Editor editor = this;
-        ctrlC.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                executeCommand(new CopyCommand(editor));
-            }
-        });
-        ctrlX.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                executeCommand(new CutCommand(editor));
-            }
-        });
-        ctrlV.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                executeCommand(new PasteCommand(editor));
-            }
-        });
-        ctrlZ.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                undo();
-            }
-        });
+        // 사용자가 새 명령 객체와 상호 작용할 때마다 새 명령 객체를 생성
+        ctrlC.addActionListener(e -> executeCommand(new CopyCommand(editor)));
+        ctrlX.addActionListener(e -> executeCommand(new CutCommand(editor)));
+        ctrlV.addActionListener(e -> executeCommand(new PasteCommand(editor)));
+        ctrlZ.addActionListener(e -> undo());
         buttons.add(ctrlC);
         buttons.add(ctrlX);
         buttons.add(ctrlV);
@@ -69,10 +48,14 @@ public class Editor {
 
     private void executeCommand(Command command) {
         if (command.execute()) {
+            // 작업을 실행한 후 명령은 기록 스택으로 푸시
             history.push(command);
         }
     }
 
+    /**
+     * 실행 취소 작업을 수행하면 기록에서 마지막으로 실행된 명령을 가져와 역작업을 수행하거나 해당 명령으로 저장된 편집기의 과거 상태를 복원
+     */
     private void undo() {
         if (history.isEmpty()) return;
 
